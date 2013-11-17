@@ -21,6 +21,10 @@
 		B44390AA1822F8B2004A2BA7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B443908C1822F8B2004A2BA7 /* UIKit.framework */; };
 		B44390B21822F8B2004A2BA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B44390B01822F8B2004A2BA7 /* InfoPlist.strings */; };
 		B44390B41822F8B2004A2BA7 /* Freeride_Parks_InfoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B44390B31822F8B2004A2BA7 /* Freeride_Parks_InfoTests.m */; };
+		B44390BE1822F8F3004A2BA7 /* pozadi.png in Resources */ = {isa = PBXBuildFile; fileRef = B44390BD1822F8F3004A2BA7 /* pozadi.png */; };
+		B44390C218231D29004A2BA7 /* Dachstein_test.png in Resources */ = {isa = PBXBuildFile; fileRef = B44390C118231D29004A2BA7 /* Dachstein_test.png */; };
+		B44390C418231FD6004A2BA7 /* prekazky_test.png in Resources */ = {isa = PBXBuildFile; fileRef = B44390C318231FD6004A2BA7 /* prekazky_test.png */; };
+		B44390C618232178004A2BA7 /* snih.png in Resources */ = {isa = PBXBuildFile; fileRef = B44390C518232178004A2BA7 /* snih.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,11 @@
 		B44390AF1822F8B2004A2BA7 /* Freeride Parks InfoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Freeride Parks InfoTests-Info.plist"; sourceTree = "<group>"; };
 		B44390B11822F8B2004A2BA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B44390B31822F8B2004A2BA7 /* Freeride_Parks_InfoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Freeride_Parks_InfoTests.m; sourceTree = "<group>"; };
+		B44390BD1822F8F3004A2BA7 /* pozadi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pozadi.png; sourceTree = "<group>"; };
+		B44390C01823193C004A2BA7 /* frlogo */ = {isa = PBXFileReference; lastKnownFileType = file; path = frlogo; sourceTree = "<group>"; };
+		B44390C118231D29004A2BA7 /* Dachstein_test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dachstein_test.png; sourceTree = "<group>"; };
+		B44390C318231FD6004A2BA7 /* prekazky_test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = prekazky_test.png; sourceTree = "<group>"; };
+		B44390C518232178004A2BA7 /* snih.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snih.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +121,7 @@
 		B443908E1822F8B2004A2BA7 /* Freeride Parks Info */ = {
 			isa = PBXGroup;
 			children = (
+				B44390BF1822F8FF004A2BA7 /* Obrazky */,
 				B44390971822F8B2004A2BA7 /* Freeride_Parks_InfoAppDelegate.h */,
 				B44390981822F8B2004A2BA7 /* Freeride_Parks_InfoAppDelegate.m */,
 				B443909A1822F8B2004A2BA7 /* Main.storyboard */,
@@ -150,6 +160,18 @@
 				B44390B01822F8B2004A2BA7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B44390BF1822F8FF004A2BA7 /* Obrazky */ = {
+			isa = PBXGroup;
+			children = (
+				B44390BD1822F8F3004A2BA7 /* pozadi.png */,
+				B44390C118231D29004A2BA7 /* Dachstein_test.png */,
+				B44390C518232178004A2BA7 /* snih.png */,
+				B44390C318231FD6004A2BA7 /* prekazky_test.png */,
+				B44390C01823193C004A2BA7 /* frlogo */,
+			);
+			name = Obrazky;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,9 +251,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B44390C618232178004A2BA7 /* snih.png in Resources */,
+				B44390BE1822F8F3004A2BA7 /* pozadi.png in Resources */,
 				B44390A11822F8B2004A2BA7 /* Images.xcassets in Resources */,
+				B44390C418231FD6004A2BA7 /* prekazky_test.png in Resources */,
 				B44390931822F8B2004A2BA7 /* InfoPlist.strings in Resources */,
 				B443909C1822F8B2004A2BA7 /* Main.storyboard in Resources */,
+				B44390C218231D29004A2BA7 /* Dachstein_test.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +487,7 @@
 				B44390B91822F8B2004A2BA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B44390BA1822F8B2004A2BA7 /* Build configuration list for PBXNativeTarget "Freeride Parks InfoTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +496,7 @@
 				B44390BC1822F8B2004A2BA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
