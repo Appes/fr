@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B43A642C1850D5010067BF27 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B43A642B1850D5010067BF27 /* SDWebImage.framework */; };
+		B43A642E1850FA500067BF27 /* okraj_detailpark.png in Resources */ = {isa = PBXBuildFile; fileRef = B43A642D1850FA500067BF27 /* okraj_detailpark.png */; };
+		B43A64301850FC350067BF27 /* okraj_tableparky.png in Resources */ = {isa = PBXBuildFile; fileRef = B43A642F1850FC350067BF27 /* okraj_tableparky.png */; };
+		B43A6436185106000067BF27 /* vlocka.png in Resources */ = {isa = PBXBuildFile; fileRef = B43A6435185106000067BF27 /* vlocka.png */; };
+		B43A6439185107B00067BF27 /* park_neprovoz.png in Resources */ = {isa = PBXBuildFile; fileRef = B43A6437185107B00067BF27 /* park_neprovoz.png */; };
+		B43A643A185107B00067BF27 /* park_v_provozu.png in Resources */ = {isa = PBXBuildFile; fileRef = B43A6438185107B00067BF27 /* park_v_provozu.png */; };
 		B44390891822F8B2004A2BA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B44390881822F8B2004A2BA7 /* Foundation.framework */; };
 		B443908B1822F8B2004A2BA7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B443908A1822F8B2004A2BA7 /* CoreGraphics.framework */; };
 		B443908D1822F8B2004A2BA7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B443908C1822F8B2004A2BA7 /* UIKit.framework */; };
@@ -16,28 +22,49 @@
 		B443909C1822F8B2004A2BA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B443909A1822F8B2004A2BA7 /* Main.storyboard */; };
 		B443909F1822F8B2004A2BA7 /* Freeride_Parks_InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B443909E1822F8B2004A2BA7 /* Freeride_Parks_InfoViewController.m */; };
 		B44390A11822F8B2004A2BA7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B44390A01822F8B2004A2BA7 /* Images.xcassets */; };
-		B44390A81822F8B2004A2BA7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B44390A71822F8B2004A2BA7 /* XCTest.framework */; };
-		B44390A91822F8B2004A2BA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B44390881822F8B2004A2BA7 /* Foundation.framework */; };
-		B44390AA1822F8B2004A2BA7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B443908C1822F8B2004A2BA7 /* UIKit.framework */; };
-		B44390B21822F8B2004A2BA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B44390B01822F8B2004A2BA7 /* InfoPlist.strings */; };
-		B44390B41822F8B2004A2BA7 /* Freeride_Parks_InfoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B44390B31822F8B2004A2BA7 /* Freeride_Parks_InfoTests.m */; };
 		B44390BE1822F8F3004A2BA7 /* pozadi.png in Resources */ = {isa = PBXBuildFile; fileRef = B44390BD1822F8F3004A2BA7 /* pozadi.png */; };
 		B44390C218231D29004A2BA7 /* Dachstein_test.png in Resources */ = {isa = PBXBuildFile; fileRef = B44390C118231D29004A2BA7 /* Dachstein_test.png */; };
 		B44390C418231FD6004A2BA7 /* prekazky_test.png in Resources */ = {isa = PBXBuildFile; fileRef = B44390C318231FD6004A2BA7 /* prekazky_test.png */; };
 		B44390C618232178004A2BA7 /* snih.png in Resources */ = {isa = PBXBuildFile; fileRef = B44390C518232178004A2BA7 /* snih.png */; };
+		E90587ED18509A9400C13C4D /* fotkyView.m in Sources */ = {isa = PBXBuildFile; fileRef = E90587EC18509A9400C13C4D /* fotkyView.m */; };
+		E90587F018509ACD00C13C4D /* fotkaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E90587EF18509ACD00C13C4D /* fotkaCell.m */; };
+		E928E4851850BF8900FB157C /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E928E4841850BF8900FB157C /* ImageIO.framework */; };
+		E950E63D184BCA8700D94C51 /* SeznamCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E950E63C184BCA8700D94C51 /* SeznamCell.m */; };
+		E950E63F184C933800D94C51 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E950E63E184C933800D94C51 /* CoreLocation.framework */; };
+		E950E642184C96D200D94C51 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E950E641184C96D200D94C51 /* DetailViewController.m */; };
+		E950E645184C96ED00D94C51 /* DetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E950E644184C96ED00D94C51 /* DetailCell.m */; };
+		E950E648184C972800D94C51 /* PrekazkyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E950E647184C972800D94C51 /* PrekazkyViewController.m */; };
+		E950E64B184C975600D94C51 /* PrekazkyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E950E64A184C975600D94C51 /* PrekazkyCell.m */; };
+		E950E656184CA86800D94C51 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E950E655184CA86800D94C51 /* QuartzCore.framework */; };
+		E9A418DF184DD3690001BE8B /* aktualni_modry.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A418D3184DD3690001BE8B /* aktualni_modry.png */; };
+		E9A418E0184DD3690001BE8B /* aktualni.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A418D4184DD3690001BE8B /* aktualni.png */; };
+		E9A418E1184DD3690001BE8B /* nejblizsi_modry.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A418D5184DD3690001BE8B /* nejblizsi_modry.png */; };
+		E9A418E2184DD3690001BE8B /* nejblizsi.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A418D6184DD3690001BE8B /* nejblizsi.png */; };
+		E9A418E3184DD3690001BE8B /* oblibene_bile.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A418D7184DD3690001BE8B /* oblibene_bile.png */; };
+		E9A418E4184DD3690001BE8B /* oblibene_modre.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A418D8184DD3690001BE8B /* oblibene_modre.png */; };
+		E9A418E5184DD3690001BE8B /* oblibene.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A418D9184DD3690001BE8B /* oblibene.png */; };
+		E9A418E8184DD3690001BE8B /* snow_bile.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A418DC184DD3690001BE8B /* snow_bile.png */; };
+		E9A418E9184DD3690001BE8B /* snow_modre.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A418DD184DD3690001BE8B /* snow_modre.png */; };
+		E9A418EA184DD3690001BE8B /* vlocka_info_parky.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A418DE184DD3690001BE8B /* vlocka_info_parky.png */; };
+		E9A418F3184DDFE30001BE8B /* navigovat_modry.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A418EB184DDFE30001BE8B /* navigovat_modry.png */; };
+		E9A418F4184DDFE30001BE8B /* aktualnid.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A418EC184DDFE30001BE8B /* aktualnid.png */; };
+		E9A418F5184DDFE30001BE8B /* komentare_detail.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A418ED184DDFE30001BE8B /* komentare_detail.png */; };
+		E9A418F6184DDFE30001BE8B /* navigovat.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A418EE184DDFE30001BE8B /* navigovat.png */; };
+		E9A418F7184DDFE30001BE8B /* popis_modry.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A418EF184DDFE30001BE8B /* popis_modry.png */; };
+		E9A418F8184DDFE30001BE8B /* komentare.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A418F0184DDFE30001BE8B /* komentare.png */; };
+		E9A418F9184DDFE30001BE8B /* popis.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A418F1184DDFE30001BE8B /* popis.png */; };
+		E9A418FA184DDFE30001BE8B /* aktualnid_modry.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A418F2184DDFE30001BE8B /* aktualnid_modry.png */; };
+		E9A418FD184DEC1D0001BE8B /* prekazkaje.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A418FB184DEC1D0001BE8B /* prekazkaje.png */; };
+		E9A418FE184DEC1D0001BE8B /* prekazkaneni.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A418FC184DEC1D0001BE8B /* prekazkaneni.png */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		B44390AB1822F8B2004A2BA7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B443907D1822F8B2004A2BA7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B44390841822F8B2004A2BA7;
-			remoteInfo = "Freeride Parks Info";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		B43A642B1850D5010067BF27 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = "<group>"; };
+		B43A642D1850FA500067BF27 /* okraj_detailpark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = okraj_detailpark.png; sourceTree = "<group>"; };
+		B43A642F1850FC350067BF27 /* okraj_tableparky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = okraj_tableparky.png; sourceTree = "<group>"; };
+		B43A6435185106000067BF27 /* vlocka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vlocka.png; sourceTree = "<group>"; };
+		B43A6437185107B00067BF27 /* park_neprovoz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = park_neprovoz.png; sourceTree = "<group>"; };
+		B43A6438185107B00067BF27 /* park_v_provozu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = park_v_provozu.png; sourceTree = "<group>"; };
 		B44390851822F8B2004A2BA7 /* Freeride Parks Info.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Freeride Parks Info.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B44390881822F8B2004A2BA7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B443908A1822F8B2004A2BA7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -52,16 +79,49 @@
 		B443909D1822F8B2004A2BA7 /* Freeride_Parks_InfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Freeride_Parks_InfoViewController.h; sourceTree = "<group>"; };
 		B443909E1822F8B2004A2BA7 /* Freeride_Parks_InfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Freeride_Parks_InfoViewController.m; sourceTree = "<group>"; };
 		B44390A01822F8B2004A2BA7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		B44390A61822F8B2004A2BA7 /* Freeride Parks InfoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Freeride Parks InfoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B44390A71822F8B2004A2BA7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		B44390AF1822F8B2004A2BA7 /* Freeride Parks InfoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Freeride Parks InfoTests-Info.plist"; sourceTree = "<group>"; };
-		B44390B11822F8B2004A2BA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B44390B31822F8B2004A2BA7 /* Freeride_Parks_InfoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Freeride_Parks_InfoTests.m; sourceTree = "<group>"; };
 		B44390BD1822F8F3004A2BA7 /* pozadi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pozadi.png; sourceTree = "<group>"; };
 		B44390C01823193C004A2BA7 /* frlogo */ = {isa = PBXFileReference; lastKnownFileType = file; path = frlogo; sourceTree = "<group>"; };
 		B44390C118231D29004A2BA7 /* Dachstein_test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dachstein_test.png; sourceTree = "<group>"; };
 		B44390C318231FD6004A2BA7 /* prekazky_test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = prekazky_test.png; sourceTree = "<group>"; };
 		B44390C518232178004A2BA7 /* snih.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snih.png; sourceTree = "<group>"; };
+		E90587EB18509A9400C13C4D /* fotkyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fotkyView.h; sourceTree = "<group>"; };
+		E90587EC18509A9400C13C4D /* fotkyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fotkyView.m; sourceTree = "<group>"; };
+		E90587EE18509ACD00C13C4D /* fotkaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fotkaCell.h; sourceTree = "<group>"; };
+		E90587EF18509ACD00C13C4D /* fotkaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fotkaCell.m; sourceTree = "<group>"; };
+		E928E4841850BF8900FB157C /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		E950E63B184BCA8700D94C51 /* SeznamCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeznamCell.h; sourceTree = "<group>"; };
+		E950E63C184BCA8700D94C51 /* SeznamCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeznamCell.m; sourceTree = "<group>"; };
+		E950E63E184C933800D94C51 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E950E640184C96D200D94C51 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		E950E641184C96D200D94C51 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		E950E643184C96ED00D94C51 /* DetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailCell.h; sourceTree = "<group>"; };
+		E950E644184C96ED00D94C51 /* DetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCell.m; sourceTree = "<group>"; };
+		E950E646184C972800D94C51 /* PrekazkyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrekazkyViewController.h; sourceTree = "<group>"; };
+		E950E647184C972800D94C51 /* PrekazkyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrekazkyViewController.m; sourceTree = "<group>"; };
+		E950E649184C975600D94C51 /* PrekazkyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrekazkyCell.h; sourceTree = "<group>"; };
+		E950E64A184C975600D94C51 /* PrekazkyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrekazkyCell.m; sourceTree = "<group>"; };
+		E950E655184CA86800D94C51 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E9A418D3184DD3690001BE8B /* aktualni_modry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aktualni_modry.png; sourceTree = "<group>"; };
+		E9A418D4184DD3690001BE8B /* aktualni.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aktualni.png; sourceTree = "<group>"; };
+		E9A418D5184DD3690001BE8B /* nejblizsi_modry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nejblizsi_modry.png; sourceTree = "<group>"; };
+		E9A418D6184DD3690001BE8B /* nejblizsi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nejblizsi.png; sourceTree = "<group>"; };
+		E9A418D7184DD3690001BE8B /* oblibene_bile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oblibene_bile.png; sourceTree = "<group>"; };
+		E9A418D8184DD3690001BE8B /* oblibene_modre.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oblibene_modre.png; sourceTree = "<group>"; };
+		E9A418D9184DD3690001BE8B /* oblibene.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oblibene.png; sourceTree = "<group>"; };
+		E9A418DC184DD3690001BE8B /* snow_bile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snow_bile.png; sourceTree = "<group>"; };
+		E9A418DD184DD3690001BE8B /* snow_modre.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snow_modre.png; sourceTree = "<group>"; };
+		E9A418DE184DD3690001BE8B /* vlocka_info_parky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vlocka_info_parky.png; sourceTree = "<group>"; };
+		E9A418EB184DDFE30001BE8B /* navigovat_modry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigovat_modry.png; sourceTree = "<group>"; };
+		E9A418EC184DDFE30001BE8B /* aktualnid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aktualnid.png; sourceTree = "<group>"; };
+		E9A418ED184DDFE30001BE8B /* komentare_detail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = komentare_detail.png; sourceTree = "<group>"; };
+		E9A418EE184DDFE30001BE8B /* navigovat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navigovat.png; sourceTree = "<group>"; };
+		E9A418EF184DDFE30001BE8B /* popis_modry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popis_modry.png; sourceTree = "<group>"; };
+		E9A418F0184DDFE30001BE8B /* komentare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = komentare.png; sourceTree = "<group>"; };
+		E9A418F1184DDFE30001BE8B /* popis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popis.png; sourceTree = "<group>"; };
+		E9A418F2184DDFE30001BE8B /* aktualnid_modry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aktualnid_modry.png; sourceTree = "<group>"; };
+		E9A418FB184DEC1D0001BE8B /* prekazkaje.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = prekazkaje.png; sourceTree = "<group>"; };
+		E9A418FC184DEC1D0001BE8B /* prekazkaneni.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = prekazkaneni.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,19 +129,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E928E4851850BF8900FB157C /* ImageIO.framework in Frameworks */,
 				B443908B1822F8B2004A2BA7 /* CoreGraphics.framework in Frameworks */,
+				E950E656184CA86800D94C51 /* QuartzCore.framework in Frameworks */,
+				E950E63F184C933800D94C51 /* CoreLocation.framework in Frameworks */,
+				B43A642C1850D5010067BF27 /* SDWebImage.framework in Frameworks */,
 				B443908D1822F8B2004A2BA7 /* UIKit.framework in Frameworks */,
 				B44390891822F8B2004A2BA7 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B44390A31822F8B2004A2BA7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B44390A81822F8B2004A2BA7 /* XCTest.framework in Frameworks */,
-				B44390AA1822F8B2004A2BA7 /* UIKit.framework in Frameworks */,
-				B44390A91822F8B2004A2BA7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,8 +145,8 @@
 		B443907C1822F8B2004A2BA7 = {
 			isa = PBXGroup;
 			children = (
+				B43A642B1850D5010067BF27 /* SDWebImage.framework */,
 				B443908E1822F8B2004A2BA7 /* Freeride Parks Info */,
-				B44390AD1822F8B2004A2BA7 /* Freeride Parks InfoTests */,
 				B44390871822F8B2004A2BA7 /* Frameworks */,
 				B44390861822F8B2004A2BA7 /* Products */,
 			);
@@ -102,7 +156,6 @@
 			isa = PBXGroup;
 			children = (
 				B44390851822F8B2004A2BA7 /* Freeride Parks Info.app */,
-				B44390A61822F8B2004A2BA7 /* Freeride Parks InfoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,6 +163,9 @@
 		B44390871822F8B2004A2BA7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E928E4841850BF8900FB157C /* ImageIO.framework */,
+				E950E655184CA86800D94C51 /* QuartzCore.framework */,
+				E950E63E184C933800D94C51 /* CoreLocation.framework */,
 				B44390881822F8B2004A2BA7 /* Foundation.framework */,
 				B443908A1822F8B2004A2BA7 /* CoreGraphics.framework */,
 				B443908C1822F8B2004A2BA7 /* UIKit.framework */,
@@ -127,6 +183,20 @@
 				B443909A1822F8B2004A2BA7 /* Main.storyboard */,
 				B443909D1822F8B2004A2BA7 /* Freeride_Parks_InfoViewController.h */,
 				B443909E1822F8B2004A2BA7 /* Freeride_Parks_InfoViewController.m */,
+				E950E63B184BCA8700D94C51 /* SeznamCell.h */,
+				E950E63C184BCA8700D94C51 /* SeznamCell.m */,
+				E950E640184C96D200D94C51 /* DetailViewController.h */,
+				E950E641184C96D200D94C51 /* DetailViewController.m */,
+				E950E643184C96ED00D94C51 /* DetailCell.h */,
+				E950E644184C96ED00D94C51 /* DetailCell.m */,
+				E950E646184C972800D94C51 /* PrekazkyViewController.h */,
+				E950E647184C972800D94C51 /* PrekazkyViewController.m */,
+				E950E649184C975600D94C51 /* PrekazkyCell.h */,
+				E950E64A184C975600D94C51 /* PrekazkyCell.m */,
+				E90587EB18509A9400C13C4D /* fotkyView.h */,
+				E90587EC18509A9400C13C4D /* fotkyView.m */,
+				E90587EE18509ACD00C13C4D /* fotkaCell.h */,
+				E90587EF18509ACD00C13C4D /* fotkaCell.m */,
 				B44390A01822F8B2004A2BA7 /* Images.xcassets */,
 				B443908F1822F8B2004A2BA7 /* Supporting Files */,
 			);
@@ -136,6 +206,28 @@
 		B443908F1822F8B2004A2BA7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E9A418FB184DEC1D0001BE8B /* prekazkaje.png */,
+				E9A418FC184DEC1D0001BE8B /* prekazkaneni.png */,
+				E9A418EB184DDFE30001BE8B /* navigovat_modry.png */,
+				E9A418EC184DDFE30001BE8B /* aktualnid.png */,
+				E9A418ED184DDFE30001BE8B /* komentare_detail.png */,
+				E9A418EE184DDFE30001BE8B /* navigovat.png */,
+				E9A418EF184DDFE30001BE8B /* popis_modry.png */,
+				B43A6437185107B00067BF27 /* park_neprovoz.png */,
+				B43A6438185107B00067BF27 /* park_v_provozu.png */,
+				E9A418F0184DDFE30001BE8B /* komentare.png */,
+				E9A418F1184DDFE30001BE8B /* popis.png */,
+				E9A418F2184DDFE30001BE8B /* aktualnid_modry.png */,
+				E9A418D3184DD3690001BE8B /* aktualni_modry.png */,
+				E9A418D4184DD3690001BE8B /* aktualni.png */,
+				E9A418D5184DD3690001BE8B /* nejblizsi_modry.png */,
+				E9A418D6184DD3690001BE8B /* nejblizsi.png */,
+				E9A418D7184DD3690001BE8B /* oblibene_bile.png */,
+				E9A418D8184DD3690001BE8B /* oblibene_modre.png */,
+				E9A418D9184DD3690001BE8B /* oblibene.png */,
+				E9A418DC184DD3690001BE8B /* snow_bile.png */,
+				E9A418DD184DD3690001BE8B /* snow_modre.png */,
+				E9A418DE184DD3690001BE8B /* vlocka_info_parky.png */,
 				B44390901822F8B2004A2BA7 /* Freeride Parks Info-Info.plist */,
 				B44390911822F8B2004A2BA7 /* InfoPlist.strings */,
 				B44390941822F8B2004A2BA7 /* main.m */,
@@ -144,28 +236,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		B44390AD1822F8B2004A2BA7 /* Freeride Parks InfoTests */ = {
-			isa = PBXGroup;
-			children = (
-				B44390B31822F8B2004A2BA7 /* Freeride_Parks_InfoTests.m */,
-				B44390AE1822F8B2004A2BA7 /* Supporting Files */,
-			);
-			path = "Freeride Parks InfoTests";
-			sourceTree = "<group>";
-		};
-		B44390AE1822F8B2004A2BA7 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				B44390AF1822F8B2004A2BA7 /* Freeride Parks InfoTests-Info.plist */,
-				B44390B01822F8B2004A2BA7 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		B44390BF1822F8FF004A2BA7 /* Obrazky */ = {
 			isa = PBXGroup;
 			children = (
+				B43A642D1850FA500067BF27 /* okraj_detailpark.png */,
 				B44390BD1822F8F3004A2BA7 /* pozadi.png */,
+				B43A642F1850FC350067BF27 /* okraj_tableparky.png */,
+				B43A6435185106000067BF27 /* vlocka.png */,
 				B44390C118231D29004A2BA7 /* Dachstein_test.png */,
 				B44390C518232178004A2BA7 /* snih.png */,
 				B44390C318231FD6004A2BA7 /* prekazky_test.png */,
@@ -194,24 +271,6 @@
 			productReference = B44390851822F8B2004A2BA7 /* Freeride Parks Info.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B44390A51822F8B2004A2BA7 /* Freeride Parks InfoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B44390BA1822F8B2004A2BA7 /* Build configuration list for PBXNativeTarget "Freeride Parks InfoTests" */;
-			buildPhases = (
-				B44390A21822F8B2004A2BA7 /* Sources */,
-				B44390A31822F8B2004A2BA7 /* Frameworks */,
-				B44390A41822F8B2004A2BA7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B44390AC1822F8B2004A2BA7 /* PBXTargetDependency */,
-			);
-			name = "Freeride Parks InfoTests";
-			productName = "Freeride Parks InfoTests";
-			productReference = B44390A61822F8B2004A2BA7 /* Freeride Parks InfoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -221,11 +280,6 @@
 				CLASSPREFIX = "Freeride Parks Info";
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Appes developers s.r.o.";
-				TargetAttributes = {
-					B44390A51822F8B2004A2BA7 = {
-						TestTargetID = B44390841822F8B2004A2BA7;
-					};
-				};
 			};
 			buildConfigurationList = B44390801822F8B2004A2BA7 /* Build configuration list for PBXProject "Freeride Parks Info" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -241,7 +295,6 @@
 			projectRoot = "";
 			targets = (
 				B44390841822F8B2004A2BA7 /* Freeride Parks Info */,
-				B44390A51822F8B2004A2BA7 /* Freeride Parks InfoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -251,21 +304,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9A418E2184DD3690001BE8B /* nejblizsi.png in Resources */,
+				E9A418E1184DD3690001BE8B /* nejblizsi_modry.png in Resources */,
+				E9A418DF184DD3690001BE8B /* aktualni_modry.png in Resources */,
+				E9A418E3184DD3690001BE8B /* oblibene_bile.png in Resources */,
+				B43A642E1850FA500067BF27 /* okraj_detailpark.png in Resources */,
+				B43A6439185107B00067BF27 /* park_neprovoz.png in Resources */,
 				B44390C618232178004A2BA7 /* snih.png in Resources */,
+				E9A418E4184DD3690001BE8B /* oblibene_modre.png in Resources */,
 				B44390BE1822F8F3004A2BA7 /* pozadi.png in Resources */,
+				E9A418F7184DDFE30001BE8B /* popis_modry.png in Resources */,
+				E9A418F8184DDFE30001BE8B /* komentare.png in Resources */,
+				E9A418FD184DEC1D0001BE8B /* prekazkaje.png in Resources */,
+				B43A643A185107B00067BF27 /* park_v_provozu.png in Resources */,
 				B44390A11822F8B2004A2BA7 /* Images.xcassets in Resources */,
 				B44390C418231FD6004A2BA7 /* prekazky_test.png in Resources */,
+				E9A418E5184DD3690001BE8B /* oblibene.png in Resources */,
+				E9A418E8184DD3690001BE8B /* snow_bile.png in Resources */,
+				E9A418F4184DDFE30001BE8B /* aktualnid.png in Resources */,
+				E9A418FE184DEC1D0001BE8B /* prekazkaneni.png in Resources */,
+				E9A418F5184DDFE30001BE8B /* komentare_detail.png in Resources */,
 				B44390931822F8B2004A2BA7 /* InfoPlist.strings in Resources */,
+				E9A418FA184DDFE30001BE8B /* aktualnid_modry.png in Resources */,
+				E9A418F6184DDFE30001BE8B /* navigovat.png in Resources */,
+				E9A418E9184DD3690001BE8B /* snow_modre.png in Resources */,
+				E9A418F3184DDFE30001BE8B /* navigovat_modry.png in Resources */,
+				E9A418EA184DD3690001BE8B /* vlocka_info_parky.png in Resources */,
 				B443909C1822F8B2004A2BA7 /* Main.storyboard in Resources */,
+				E9A418F9184DDFE30001BE8B /* popis.png in Resources */,
+				B43A64301850FC350067BF27 /* okraj_tableparky.png in Resources */,
+				B43A6436185106000067BF27 /* vlocka.png in Resources */,
+				E9A418E0184DD3690001BE8B /* aktualni.png in Resources */,
 				B44390C218231D29004A2BA7 /* Dachstein_test.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B44390A41822F8B2004A2BA7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B44390B21822F8B2004A2BA7 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,29 +346,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E950E642184C96D200D94C51 /* DetailViewController.m in Sources */,
 				B443909F1822F8B2004A2BA7 /* Freeride_Parks_InfoViewController.m in Sources */,
+				E950E64B184C975600D94C51 /* PrekazkyCell.m in Sources */,
+				E950E645184C96ED00D94C51 /* DetailCell.m in Sources */,
+				E950E648184C972800D94C51 /* PrekazkyViewController.m in Sources */,
+				E90587F018509ACD00C13C4D /* fotkaCell.m in Sources */,
+				E950E63D184BCA8700D94C51 /* SeznamCell.m in Sources */,
 				B44390991822F8B2004A2BA7 /* Freeride_Parks_InfoAppDelegate.m in Sources */,
+				E90587ED18509A9400C13C4D /* fotkyView.m in Sources */,
 				B44390951822F8B2004A2BA7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B44390A21822F8B2004A2BA7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B44390B41822F8B2004A2BA7 /* Freeride_Parks_InfoTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B44390AC1822F8B2004A2BA7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B44390841822F8B2004A2BA7 /* Freeride Parks Info */;
-			targetProxy = B44390AB1822F8B2004A2BA7 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B44390911822F8B2004A2BA7 /* InfoPlist.strings */ = {
@@ -315,14 +376,6 @@
 				B443909B1822F8B2004A2BA7 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		B44390B01822F8B2004A2BA7 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B44390B11822F8B2004A2BA7 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -405,9 +458,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/davidkratochvil/Desktop/Freeride\\ Parks\\ Info/Freeride\\ Parks\\ Info",
+					"/Users/yanrenelt/Desktop/Freeride\\ Parks\\ Info",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Freeride Parks Info/Freeride Parks Info-Prefix.pch";
 				INFOPLIST_FILE = "Freeride Parks Info/Freeride Parks Info-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -418,53 +477,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/davidkratochvil/Desktop/Freeride\\ Parks\\ Info/Freeride\\ Parks\\ Info",
+					"/Users/yanrenelt/Desktop/Freeride\\ Parks\\ Info",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Freeride Parks Info/Freeride Parks Info-Prefix.pch";
 				INFOPLIST_FILE = "Freeride Parks Info/Freeride Parks Info-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		B44390BB1822F8B2004A2BA7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Freeride Parks Info.app/Freeride Parks Info";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Freeride Parks Info/Freeride Parks Info-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Freeride Parks InfoTests/Freeride Parks InfoTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		B44390BC1822F8B2004A2BA7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Freeride Parks Info.app/Freeride Parks Info";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Freeride Parks Info/Freeride Parks Info-Prefix.pch";
-				INFOPLIST_FILE = "Freeride Parks InfoTests/Freeride Parks InfoTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -485,15 +508,6 @@
 			buildConfigurations = (
 				B44390B81822F8B2004A2BA7 /* Debug */,
 				B44390B91822F8B2004A2BA7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B44390BA1822F8B2004A2BA7 /* Build configuration list for PBXNativeTarget "Freeride Parks InfoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B44390BB1822F8B2004A2BA7 /* Debug */,
-				B44390BC1822F8B2004A2BA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

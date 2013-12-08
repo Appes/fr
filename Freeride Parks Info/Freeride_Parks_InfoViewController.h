@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface Freeride_Parks_InfoViewController : UIViewController
+@interface Freeride_Parks_InfoViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIButton *buttonNejblizsi;
+- (IBAction)tappedNejblizsi:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *buttonAktualni;
+- (IBAction)tappedAktualni:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *buttonSnih;
+- (IBAction)tappedSnih:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *buttonOblibene;
+- (IBAction)tappedOblibene:(id)sender;
 
 @end
