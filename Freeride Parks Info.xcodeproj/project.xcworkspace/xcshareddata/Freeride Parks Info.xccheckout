@@ -5,34 +5,46 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>D498B303-521C-49EA-BB37-794A34E79945</string>
+	<string>0334BB0D-9C32-4E1A-AF56-A3175834EE5C</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Freeride Parks Info</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>FBF6FEB3-B12C-404E-A1B9-1888BD3DFE0C</key>
-		<string>https://github.com/Appes/Freeride-Parks-Info.git</string>
+		<key>2B04930E-5A92-4A7B-9DF6-7A6658B3E13A</key>
+		<string>https://github.com/Appes/fr</string>
+		<key>A304EEB0-6394-4900-A007-71FFB1FAA0C0</key>
+		<string>https://github.com/appes/Freeride_Parks_Info</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Freeride Parks Info.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>FBF6FEB3-B12C-404E-A1B9-1888BD3DFE0C</key>
+		<key>2B04930E-5A92-4A7B-9DF6-7A6658B3E13A</key>
 		<string>../..</string>
+		<key>A304EEB0-6394-4900-A007-71FFB1FAA0C0</key>
+		<string>../../../Freeride Parks Info</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/Appes/Freeride-Parks-Info.git</string>
+	<string>https://github.com/Appes/fr</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>FBF6FEB3-B12C-404E-A1B9-1888BD3DFE0C</string>
+	<string>2B04930E-5A92-4A7B-9DF6-7A6658B3E13A</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>FBF6FEB3-B12C-404E-A1B9-1888BD3DFE0C</string>
+			<string>2B04930E-5A92-4A7B-9DF6-7A6658B3E13A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FR</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A304EEB0-6394-4900-A007-71FFB1FAA0C0</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Freeride Parks Info</string>
 		</dict>
