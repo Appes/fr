@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 Appes developers s.r.o. All rights reserved.
 //
 
+//vole
+
 #import "Freeride_Parks_InfoViewController.h"
 #import "SeznamCell.h"
 #import <CoreLocation/CoreLocation.h>
