@@ -5,48 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>0334BB0D-9C32-4E1A-AF56-A3175834EE5C</string>
+	<string>F680BDA8-F957-4B72-8968-C8EB9213ABB3</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Freeride Parks Info</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>2B04930E-5A92-4A7B-9DF6-7A6658B3E13A</key>
-		<string>https://github.com/Appes/fr</string>
-		<key>A304EEB0-6394-4900-A007-71FFB1FAA0C0</key>
-		<string>https://github.com/appes/Freeride_Parks_Info</string>
+		<key>30D09F3A-658B-498B-AC0E-0568A6E47197</key>
+		<string>https://github.com/Appes/fr.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Freeride Parks Info.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>2B04930E-5A92-4A7B-9DF6-7A6658B3E13A</key>
+		<key>30D09F3A-658B-498B-AC0E-0568A6E47197</key>
 		<string>../..</string>
-		<key>A304EEB0-6394-4900-A007-71FFB1FAA0C0</key>
-		<string>../../../Freeride Parks Info</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/Appes/fr</string>
+	<string>https://github.com/Appes/fr.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>2B04930E-5A92-4A7B-9DF6-7A6658B3E13A</string>
+	<string>30D09F3A-658B-498B-AC0E-0568A6E47197</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>2B04930E-5A92-4A7B-9DF6-7A6658B3E13A</string>
+			<string>30D09F3A-658B-498B-AC0E-0568A6E47197</string>
 			<key>IDESourceControlWCCName</key>
-			<string>FR</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>A304EEB0-6394-4900-A007-71FFB1FAA0C0</string>
-			<key>IDESourceControlWCCName</key>
-			<string>Freeride Parks Info</string>
+			<string>parksInfo</string>
 		</dict>
 	</array>
 </dict>
