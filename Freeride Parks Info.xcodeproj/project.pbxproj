@@ -25,6 +25,8 @@
 		B44390C218231D29004A2BA7 /* Dachstein_test.png in Resources */ = {isa = PBXBuildFile; fileRef = B44390C118231D29004A2BA7 /* Dachstein_test.png */; };
 		B44390C418231FD6004A2BA7 /* prekazky_test.png in Resources */ = {isa = PBXBuildFile; fileRef = B44390C318231FD6004A2BA7 /* prekazky_test.png */; };
 		B44390C618232178004A2BA7 /* snih.png in Resources */ = {isa = PBXBuildFile; fileRef = B44390C518232178004A2BA7 /* snih.png */; };
+		B4FFD4E81857740E00AAABE8 /* tableviewokraj_detailparku.png in Resources */ = {isa = PBXBuildFile; fileRef = B4FFD4E61857740E00AAABE8 /* tableviewokraj_detailparku.png */; };
+		B4FFD4E91857740E00AAABE8 /* tableviewokraj_parky.png in Resources */ = {isa = PBXBuildFile; fileRef = B4FFD4E71857740E00AAABE8 /* tableviewokraj_parky.png */; };
 		E90587ED18509A9400C13C4D /* fotkyView.m in Sources */ = {isa = PBXBuildFile; fileRef = E90587EC18509A9400C13C4D /* fotkyView.m */; };
 		E90587F018509ACD00C13C4D /* fotkaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E90587EF18509ACD00C13C4D /* fotkaCell.m */; };
 		E919685A185748A3009FA1E2 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9196859185748A3009FA1E2 /* SDWebImage.framework */; };
@@ -84,6 +86,8 @@
 		B44390C118231D29004A2BA7 /* Dachstein_test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Dachstein_test.png; sourceTree = "<group>"; };
 		B44390C318231FD6004A2BA7 /* prekazky_test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = prekazky_test.png; sourceTree = "<group>"; };
 		B44390C518232178004A2BA7 /* snih.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snih.png; sourceTree = "<group>"; };
+		B4FFD4E61857740E00AAABE8 /* tableviewokraj_detailparku.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tableviewokraj_detailparku.png; path = ../../../../Desktop/fr_okolo/tableviewokraj_detailparku.png; sourceTree = "<group>"; };
+		B4FFD4E71857740E00AAABE8 /* tableviewokraj_parky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tableviewokraj_parky.png; path = ../../../../Desktop/fr_okolo/tableviewokraj_parky.png; sourceTree = "<group>"; };
 		E90587EB18509A9400C13C4D /* fotkyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fotkyView.h; sourceTree = "<group>"; };
 		E90587EC18509A9400C13C4D /* fotkyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fotkyView.m; sourceTree = "<group>"; };
 		E90587EE18509ACD00C13C4D /* fotkaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fotkaCell.h; sourceTree = "<group>"; };
@@ -206,6 +210,8 @@
 		B443908F1822F8B2004A2BA7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B4FFD4E61857740E00AAABE8 /* tableviewokraj_detailparku.png */,
+				B4FFD4E71857740E00AAABE8 /* tableviewokraj_parky.png */,
 				E9A418FB184DEC1D0001BE8B /* prekazkaje.png */,
 				E9A418FC184DEC1D0001BE8B /* prekazkaneni.png */,
 				E9A418EB184DDFE30001BE8B /* navigovat_modry.png */,
@@ -319,6 +325,7 @@
 				B43A643A185107B00067BF27 /* park_v_provozu.png in Resources */,
 				B44390A11822F8B2004A2BA7 /* Images.xcassets in Resources */,
 				B44390C418231FD6004A2BA7 /* prekazky_test.png in Resources */,
+				B4FFD4E81857740E00AAABE8 /* tableviewokraj_detailparku.png in Resources */,
 				E9A418E5184DD3690001BE8B /* oblibene.png in Resources */,
 				E9A418E8184DD3690001BE8B /* snow_bile.png in Resources */,
 				E9A418F4184DDFE30001BE8B /* aktualnid.png in Resources */,
@@ -334,6 +341,7 @@
 				E9A418F9184DDFE30001BE8B /* popis.png in Resources */,
 				B43A64301850FC350067BF27 /* okraj_tableparky.png in Resources */,
 				B43A6436185106000067BF27 /* vlocka.png in Resources */,
+				B4FFD4E91857740E00AAABE8 /* tableviewokraj_parky.png in Resources */,
 				E9A418E0184DD3690001BE8B /* aktualni.png in Resources */,
 				B44390C218231D29004A2BA7 /* Dachstein_test.png in Resources */,
 			);

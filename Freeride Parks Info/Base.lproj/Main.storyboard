@@ -143,14 +143,22 @@
                                     <action selector="tappedOblibene:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2QV-U4-EEN"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tableviewokraj_parky.png" translatesAutoresizingMaskIntoConstraints="NO" id="l4n-JE-yuv">
+                                <rect key="frame" x="9" y="78" width="302" height="445"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="fzE-eH-WJ7" firstAttribute="top" secondItem="5Dg-XY-o0h" secondAttribute="bottom" constant="3" id="Fme-yO-9RW"/>
+                            <constraint firstItem="fzE-eH-WJ7" firstAttribute="top" secondItem="l4n-JE-yuv" secondAttribute="bottom" constant="45" id="N7c-jh-qbE"/>
+                            <constraint firstItem="l4n-JE-yuv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="9" id="Q1a-gd-HLU"/>
                             <constraint firstItem="fzE-eH-WJ7" firstAttribute="top" secondItem="mPu-Yv-Pcj" secondAttribute="bottom" constant="4" id="QpI-rN-pPI"/>
                             <constraint firstItem="fzE-eH-WJ7" firstAttribute="top" secondItem="UGq-WA-sL6" secondAttribute="bottom" constant="1" id="Qxl-D6-mNj"/>
+                            <constraint firstAttribute="trailing" secondItem="l4n-JE-yuv" secondAttribute="trailing" constant="9" id="fZt-y8-r3g"/>
                             <constraint firstItem="XBq-EA-gY9" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="88" id="mqn-HX-Zgx"/>
                             <constraint firstAttribute="bottom" secondItem="XBq-EA-gY9" secondAttribute="bottom" constant="55" id="qSV-37-cSw"/>
+                            <constraint firstItem="l4n-JE-yuv" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="78" id="uos-lC-JP6"/>
                             <constraint firstItem="fzE-eH-WJ7" firstAttribute="top" secondItem="k4t-lU-IXd" secondAttribute="bottom" constant="7" id="xXg-3J-Mnf"/>
                         </constraints>
                     </view>
@@ -308,15 +316,23 @@
                                     <action selector="tappedOblibene:" destination="vNK-Br-t7B" eventType="touchUpInside" id="grx-pY-L9C"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tableviewokraj_detailparku.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ll9-th-kc2">
+                                <rect key="frame" x="9" y="102" width="302" height="426"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="nkE-Um-Oyi" secondAttribute="bottom" constant="-1" id="CFJ-qu-a2u"/>
                             <constraint firstItem="fEP-9h-mMr" firstAttribute="top" secondItem="hC7-V7-o9U" secondAttribute="bottom" constant="4" id="Gbu-fA-uu9"/>
+                            <constraint firstItem="Ll9-th-kc2" firstAttribute="leading" secondItem="Q53-j6-On6" secondAttribute="leading" constant="9" id="LaQ-ag-tmg"/>
+                            <constraint firstAttribute="trailing" secondItem="Ll9-th-kc2" secondAttribute="trailing" constant="9" id="N3j-ev-B8Y"/>
                             <constraint firstAttribute="bottom" secondItem="Uwu-RQ-cIZ" secondAttribute="bottom" constant="-1" id="ReY-sN-hKF"/>
                             <constraint firstItem="iI5-If-aqW" firstAttribute="top" secondItem="Q53-j6-On6" secondAttribute="top" constant="112" id="XH8-Va-oZ9"/>
+                            <constraint firstAttribute="bottom" secondItem="Ll9-th-kc2" secondAttribute="bottom" constant="40" id="ccv-4J-rUi"/>
                             <constraint firstAttribute="bottom" secondItem="xZh-wH-GOh" secondAttribute="bottom" constant="1" id="hyi-1o-NoA"/>
                             <constraint firstItem="fEP-9h-mMr" firstAttribute="top" secondItem="iI5-If-aqW" secondAttribute="bottom" constant="50" id="p9D-hM-sfz"/>
+                            <constraint firstItem="Ll9-th-kc2" firstAttribute="top" secondItem="Q53-j6-On6" secondAttribute="top" constant="102" id="put-OW-F0F"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="O3K-ft-DoR">
@@ -477,6 +493,8 @@
         <image name="popis.png" width="77" height="94"/>
         <image name="pozadi.png" width="640" height="1136"/>
         <image name="snow_bile.png" width="86" height="86"/>
+        <image name="tableviewokraj_detailparku.png" width="602" height="854"/>
+        <image name="tableviewokraj_parky.png" width="603" height="893"/>
         <image name="vlocka.png" width="30" height="26"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
