@@ -72,4 +72,11 @@
     return 45;
 }
 
+-(BOOL)shouldAutorotate {
+    return UIInterfaceOrientationMaskPortrait;
+}
+- (NSUInteger)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
+}
+
 @end

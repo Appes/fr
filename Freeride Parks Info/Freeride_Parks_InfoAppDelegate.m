@@ -8,7 +8,9 @@
 
 #import "Freeride_Parks_InfoAppDelegate.h"
 
-@implementation Freeride_Parks_InfoAppDelegate
+@implementation Freeride_Parks_InfoAppDelegate {
+    NSArray *infoNoti;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -43,6 +45,85 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
+{
+    NSString* deviceTok = [[[[deviceToken description]
+                             stringByReplacingOccurrencesOfString: @"<" withString: @""]
+                            stringByReplacingOccurrencesOfString: @">" withString: @""]
+                           stringByReplacingOccurrencesOfString: @" " withString: @""];
+    
+    
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    [prefs setObject:deviceTok forKey:@"deviceToken"];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        //posle device token na server, pokud neni pripojeni bude zkouset pri kazdem zapnuti
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        
+        if ([defaults boolForKey:@"poslatToken"] == NO) {
+            NSString *url1=@"http://appes.cz/ulozTokenFreeride.php?mujToken=";
+            url1 = [url1 stringByAppendingString:deviceTok];
+            NSURLRequest *theRequest1 = [NSURLRequest requestWithURL:[NSURL URLWithString:url1]];
+            NSData *response1 = [NSURLConnection sendSynchronousRequest: theRequest1 returningResponse: nil error: nil];
+            NSString * theString1 = [[NSString alloc] initWithData:response1 encoding:NSUTF8StringEncoding];
+            
+            if ([theString1 isEqualToString:@"ANO"]) {
+                [defaults setBool:true forKey:@"poslatToken"];
+            }
+        }
+    });
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    
+    
+    if (![[[userInfo objectForKey:@"aps"] objectForKey:@"alert"] isEqualToString:@"Freeride-Parks-Info"]) {
+        infoNoti = [[NSArray alloc] init];
+        
+        //stahnout info o notifikaci
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            
+            NSString *url2=@"http://appes.cz/FreerideNotifikace.php";
+            NSURLRequest *theRequest2 = [NSURLRequest requestWithURL:[NSURL URLWithString:url2]];
+            NSData *response2 = [NSURLConnection sendSynchronousRequest: theRequest2 returningResponse: nil error: nil];
+            NSString * theString2 = [[NSString alloc] initWithData:response2 encoding:NSUTF8StringEncoding];
+            
+            infoNoti = [theString2 componentsSeparatedByString:@",x,"];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                NSString *buttonText;
+                
+                if ([[NSString alloc] initWithString:[infoNoti objectAtIndex:1]].length == 0) {
+                    buttonText = @"OK";
+                } else {
+                    buttonText = @"Info o akci";
+                }
+                
+                UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Freeride parks info" message:[infoNoti objectAtIndex:0] delegate:self cancelButtonTitle:nil otherButtonTitles:buttonText, nil];
+                [alert show];
+            });
+        });
+    }
+}
+
+-(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[infoNoti objectAtIndex:1]]];
+    //presmerovani na spravny odkaz
+}
+
+- (NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window{
+    NSUInteger orientations = UIInterfaceOrientationMaskAllButUpsideDown;
+    
+    if(self.window.rootViewController){
+        UIViewController *presentedViewController = [[(UINavigationController *)self.window.rootViewController viewControllers] lastObject];
+        orientations = [presentedViewController supportedInterfaceOrientations];
+    }
+    
+    return orientations;
 }
 
 @end

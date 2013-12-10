@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B43A642C1850D5010067BF27 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B43A642B1850D5010067BF27 /* SDWebImage.framework */; };
 		B43A642E1850FA500067BF27 /* okraj_detailpark.png in Resources */ = {isa = PBXBuildFile; fileRef = B43A642D1850FA500067BF27 /* okraj_detailpark.png */; };
 		B43A64301850FC350067BF27 /* okraj_tableparky.png in Resources */ = {isa = PBXBuildFile; fileRef = B43A642F1850FC350067BF27 /* okraj_tableparky.png */; };
 		B43A6436185106000067BF27 /* vlocka.png in Resources */ = {isa = PBXBuildFile; fileRef = B43A6435185106000067BF27 /* vlocka.png */; };
@@ -28,6 +27,7 @@
 		B44390C618232178004A2BA7 /* snih.png in Resources */ = {isa = PBXBuildFile; fileRef = B44390C518232178004A2BA7 /* snih.png */; };
 		E90587ED18509A9400C13C4D /* fotkyView.m in Sources */ = {isa = PBXBuildFile; fileRef = E90587EC18509A9400C13C4D /* fotkyView.m */; };
 		E90587F018509ACD00C13C4D /* fotkaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E90587EF18509ACD00C13C4D /* fotkaCell.m */; };
+		E919685A185748A3009FA1E2 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9196859185748A3009FA1E2 /* SDWebImage.framework */; };
 		E928E4851850BF8900FB157C /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E928E4841850BF8900FB157C /* ImageIO.framework */; };
 		E950E63D184BCA8700D94C51 /* SeznamCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E950E63C184BCA8700D94C51 /* SeznamCell.m */; };
 		E950E63F184C933800D94C51 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E950E63E184C933800D94C51 /* CoreLocation.framework */; };
@@ -59,7 +59,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B43A642B1850D5010067BF27 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = "<group>"; };
 		B43A642D1850FA500067BF27 /* okraj_detailpark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = okraj_detailpark.png; sourceTree = "<group>"; };
 		B43A642F1850FC350067BF27 /* okraj_tableparky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = okraj_tableparky.png; sourceTree = "<group>"; };
 		B43A6435185106000067BF27 /* vlocka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vlocka.png; sourceTree = "<group>"; };
@@ -89,6 +88,7 @@
 		E90587EC18509A9400C13C4D /* fotkyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fotkyView.m; sourceTree = "<group>"; };
 		E90587EE18509ACD00C13C4D /* fotkaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fotkaCell.h; sourceTree = "<group>"; };
 		E90587EF18509ACD00C13C4D /* fotkaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fotkaCell.m; sourceTree = "<group>"; };
+		E9196859185748A3009FA1E2 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = "<group>"; };
 		E928E4841850BF8900FB157C /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		E950E63B184BCA8700D94C51 /* SeznamCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeznamCell.h; sourceTree = "<group>"; };
 		E950E63C184BCA8700D94C51 /* SeznamCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeznamCell.m; sourceTree = "<group>"; };
@@ -133,7 +133,7 @@
 				B443908B1822F8B2004A2BA7 /* CoreGraphics.framework in Frameworks */,
 				E950E656184CA86800D94C51 /* QuartzCore.framework in Frameworks */,
 				E950E63F184C933800D94C51 /* CoreLocation.framework in Frameworks */,
-				B43A642C1850D5010067BF27 /* SDWebImage.framework in Frameworks */,
+				E919685A185748A3009FA1E2 /* SDWebImage.framework in Frameworks */,
 				B443908D1822F8B2004A2BA7 /* UIKit.framework in Frameworks */,
 				B44390891822F8B2004A2BA7 /* Foundation.framework in Frameworks */,
 			);
@@ -145,7 +145,7 @@
 		B443907C1822F8B2004A2BA7 = {
 			isa = PBXGroup;
 			children = (
-				B43A642B1850D5010067BF27 /* SDWebImage.framework */,
+				E9196859185748A3009FA1E2 /* SDWebImage.framework */,
 				B443908E1822F8B2004A2BA7 /* Freeride Parks Info */,
 				B44390871822F8B2004A2BA7 /* Frameworks */,
 				B44390861822F8B2004A2BA7 /* Products */,
@@ -462,6 +462,7 @@
 					"$(inherited)",
 					"/Users/davidkratochvil/Desktop/Freeride\\ Parks\\ Info/Freeride\\ Parks\\ Info",
 					"/Users/yanrenelt/Desktop/Freeride\\ Parks\\ Info",
+					/Users/davidkratochvil/Documents/iOS/parksInfo,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Freeride Parks Info/Freeride Parks Info-Prefix.pch";
@@ -481,6 +482,7 @@
 					"$(inherited)",
 					"/Users/davidkratochvil/Desktop/Freeride\\ Parks\\ Info/Freeride\\ Parks\\ Info",
 					"/Users/yanrenelt/Desktop/Freeride\\ Parks\\ Info",
+					/Users/davidkratochvil/Documents/iOS/parksInfo,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Freeride Parks Info/Freeride Parks Info-Prefix.pch";

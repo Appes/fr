@@ -44,6 +44,8 @@
     NSMutableArray *fotkyParkCelek;
     
     int coUkazat;
+    
+    UIActivityIndicatorView *indicator;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -90,12 +92,16 @@
     _tableView.layer.cornerRadius = 12.0;
     NSLog(@"%@", _idPark);
     
-    
+    indicator =[[UIActivityIndicatorView alloc]     initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    indicator.center=self.view.center;
+    [self.view addSubview:indicator];
     
     [self stahniData];
 }
 
 -(void) stahniData {
+    [indicator startAnimating];
+    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         //code executed in the background
         
@@ -183,6 +189,7 @@
             _nadpisPark.text = [NSString stringWithFormat:@"%@", nazev[0]];
             
             [self ukazAktualni];
+            [indicator stopAnimating];
         });
         
     });
@@ -375,6 +382,13 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Park is already in your favorites" message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
         [alert show];
     }
+}
+
+-(BOOL)shouldAutorotate {
+    return UIInterfaceOrientationMaskPortrait;
+}
+- (NSUInteger)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 @end

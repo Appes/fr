@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Freeride_Parks_InfoAppDelegate : UIResponder <UIApplicationDelegate>
+@interface Freeride_Parks_InfoAppDelegate : UIResponder <UIApplicationDelegate, UIAlertViewDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

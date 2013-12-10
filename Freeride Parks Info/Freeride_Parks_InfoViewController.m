@@ -38,6 +38,8 @@
     NSMutableArray *oblibeneState;
     
     BOOL oblibene;
+    
+    UIActivityIndicatorView *indicator;
 }
 
 - (void)viewDidLoad
@@ -67,6 +69,12 @@
     
     _tableView.layer.masksToBounds = YES;
     _tableView.layer.cornerRadius = 12.0;
+    
+    indicator =[[UIActivityIndicatorView alloc]     initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    indicator.center=self.view.center;
+    [self.view addSubview:indicator];
+    
+    [indicator startAnimating];
     
     [self stahniData];
 }
@@ -122,6 +130,7 @@
             NSLog(@"%@", parkId);
             [_tableView reloadData];
             [self ukazNejblizsi];
+            [indicator stopAnimating];
             
         });
         
@@ -389,5 +398,12 @@
         NSLog(@"detail");
         
     }
+}
+
+-(BOOL)shouldAutorotate {
+    return UIInterfaceOrientationMaskPortrait;
+}
+- (NSUInteger)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
 }
 @end

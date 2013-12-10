@@ -19,6 +19,8 @@
     UIImageView *share;
     float width;
     float height;
+    
+    int currentPosition;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -36,6 +38,7 @@
 	// Do any additional setup after loading the view.
     
     NSLog(@"%@", _fotkyURL);
+    currentPosition = -2;
 }
 
 - (void)didReceiveMemoryWarning
@@ -87,6 +90,10 @@
 
 -(void) nactiObrazek:(int) pozice {
     
+    [[self navigationController] setNavigationBarHidden:YES animated:YES];
+    
+    currentPosition = pozice;
+    
     UIDeviceOrientation deviceOrientation = [[UIDevice currentDevice] orientation];
     
     if (deviceOrientation == UIInterfaceOrientationLandscapeLeft ||
@@ -115,6 +122,11 @@
                                             action:@selector(handleSingleTap:)];
     [myImage addGestureRecognizer:singleFingerTap];
     
+    UITapGestureRecognizer *singleFingerTap2 =
+    [[UITapGestureRecognizer alloc] initWithTarget:self
+                                            action:@selector(handleSingleTap2:)];
+    [myImage addGestureRecognizer:singleFingerTap2];
+    
 }
 
 - (void)handleSingleTap:(UITapGestureRecognizer *)recognizer  {
@@ -122,6 +134,52 @@
     
     [myImage removeFromSuperview];
     [share removeFromSuperview];
+    
+    currentPosition = -2;
+    [[self navigationController] setNavigationBarHidden:NO animated:YES];
+}
+
+- (void)handleSingleTap2:(UITapGestureRecognizer *)recognizer  {
+    
+    UIView *tappedView = [recognizer.view hitTest:[recognizer locationInView:recognizer.view] withEvent:nil];
+    //beru tag pro rozliseni kliku
+    int pozice = tappedView.self.tag;
+    
+    CGPoint tapPoint = [recognizer locationInView:myImage];
+    CGPoint tapPointInView = [myImage convertPoint:tapPoint toView:self.view];
+    
+    if (tapPointInView.x < width/2 - width/6) {
+        if (pozice > 0) {
+            [myImage removeFromSuperview];
+            [share removeFromSuperview];
+            [self nactiObrazek:pozice-1];
+        }
+    } else if (tapPointInView.x > width/2 + width/6) {
+        if (pozice+1 < [_fotkyURL count]) {
+            [myImage removeFromSuperview];
+            [share removeFromSuperview];
+            [self nactiObrazek:pozice+1];
+        }
+    } else {
+        [myImage removeFromSuperview];
+        [share removeFromSuperview];
+        
+        currentPosition = -2;
+        
+        [[self navigationController] setNavigationBarHidden:NO animated:YES];
+    }
+}
+
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+    if (currentPosition > -1) {
+        [myImage removeFromSuperview];
+        [share removeFromSuperview];
+        [self nactiObrazek:currentPosition];
+    }
+}
+
+- (BOOL)prefersStatusBarHidden {
+    return YES;
 }
 
 @end
