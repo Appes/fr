@@ -66,16 +66,6 @@
                            dequeueReusableCellWithReuseIdentifier:@"fotkaCell"
                            forIndexPath:indexPath];
     
-    //UIImage *image;
-    //int row = [indexPath row];
-    
-    // image = [UIImage imageNamed:obrazky[row]];
-    //image = [obrazky objectAtIndex:row];
-    
-    // myCell.jednotlivyObrazek.image = image;
-    
-    // myCell.jednotlivyObrazek.
-    
     [myCell.imageViewFotka setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", [_fotkyURL objectAtIndex:indexPath.row]]]
                              placeholderImage:[UIImage imageNamed:@"vlocka_info_parky.png"]];
     

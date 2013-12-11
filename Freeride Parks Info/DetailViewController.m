@@ -19,15 +19,15 @@
 @end
 
 @implementation DetailViewController {
-    NSMutableArray *popis;
-    NSMutableArray *lat;
-    NSMutableArray *lng;
-    NSMutableArray *popis2;
-    NSMutableArray *popis3;
-    NSMutableArray *popis4;
+    NSString *popis;
+    NSString *lat;
+    NSString *lng;
+    NSString *popis2;
+    NSString *popis3;
+    NSString *popis4;
     
-    NSMutableArray *nazev;
-    NSMutableArray *state;
+    NSString *nazev;
+    NSString *state;
     
     NSMutableArray *prekazkaNazev;
     NSMutableArray *prekazkaState;
@@ -37,6 +37,7 @@
     NSMutableArray *newsTitle;
     NSMutableArray *newsText;
     NSMutableArray *newsId;
+    NSMutableArray *newsModified;
     
     NSMutableArray *newsFotkaId;
     NSMutableArray *newsFotkaURL;
@@ -72,19 +73,10 @@
     newsText = [[NSMutableArray alloc] init];
     newsTitle = [[NSMutableArray alloc] init];
     newsId = [[NSMutableArray alloc] init];
+    newsModified = [[NSMutableArray alloc] init];
     
     newsFotkaId = [[NSMutableArray alloc] init];
     newsFotkaURL = [[NSMutableArray alloc] init];
-    
-    nazev = [[NSMutableArray alloc] init];
-    state = [[NSMutableArray alloc] init];
-    
-    popis = [[NSMutableArray alloc] init];
-    popis2 = [[NSMutableArray alloc] init];
-    popis3 = [[NSMutableArray alloc] init];
-    popis4 = [[NSMutableArray alloc] init];
-    lat = [[NSMutableArray alloc] init];
-    lng = [[NSMutableArray alloc] init];
     
     fotkyParkCelek = [[NSMutableArray alloc] init];
     
@@ -109,84 +101,58 @@
         
         NSData* kivaData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
         
-        NSDictionary* json = nil;
+        NSMutableArray* json = [[NSMutableArray alloc] init];
         if (kivaData) {
             json = [NSJSONSerialization JSONObjectWithData:kivaData options:kNilOptions error:nil];
         }
         
-        popis = [NSMutableArray arrayWithArray:[json valueForKey:@"description"]];
-        popis2 = [NSMutableArray arrayWithArray:[json valueForKey:@"prices"]];
-        popis3 = [NSMutableArray arrayWithArray:[json valueForKey:@"parking"]];
-        popis4 = [NSMutableArray arrayWithArray:[json valueForKey:@"entertainment"]];
-        lat = [NSMutableArray arrayWithArray:[json valueForKey:@"lat"]];
-        lng = [NSMutableArray arrayWithArray:[json valueForKey:@"lon"]];
+        popis = json[0][@"description"];
+        popis2 = json[0][@"prices"];
+        popis3 = json[0][@"parking"];
+        popis4 = json[0][@"entertainment"];
+        lat = json[0][@"lat"];
+        lng = json[0][@"lon"];
         
-        nazev = [NSMutableArray arrayWithArray:[json valueForKey:@"title"]];
-        state = [NSMutableArray arrayWithArray:[json valueForKey:@"state"]];
+        nazev = json[0][@"title"];
+        state = json[0][@"state"];
         
-        prekazkaNazev = [NSMutableArray arrayWithArray:[json valueForKey:@"obstacleTitle"]];
-        prekazkaPhoto = [NSMutableArray arrayWithArray:[json valueForKey:@"obstaclePhoto"]];
-        prekazkaState = [NSMutableArray arrayWithArray:[json valueForKey:@"obstacleState"]];
-        prekazkaType = [NSMutableArray arrayWithArray:[json valueForKey:@"obstacleTypeTXT"]];
-        
-        newsText = [NSMutableArray arrayWithArray:[json valueForKey:@"newsText"]];
-        newsTitle = [NSMutableArray arrayWithArray:[json valueForKey:@"newsTitle"]];
-        newsId = [NSMutableArray arrayWithArray:[json valueForKey:@"id"]];
-        
-        fotkyParkCelek = [NSMutableArray arrayWithArray:[json valueForKey:@"simple_park_photo"]];
-        
-        newsFotkaURL = [NSMutableArray arrayWithArray:[json valueForKey:@"newsImageURL"]];
-        newsFotkaId = [NSMutableArray arrayWithArray:[json valueForKey:@"newsID"]];
-        
-        
-        
-        for (int i=0; i < prekazkaNazev.count; i++) {
-            if (![[prekazkaNazev objectAtIndex:i] isKindOfClass:[NSNull class]]) {
-            } else {
-                [prekazkaNazev removeObjectIdenticalTo:[prekazkaNazev objectAtIndex:i]];
-                [prekazkaPhoto removeObjectIdenticalTo:[prekazkaPhoto objectAtIndex:i]];
-                [prekazkaState removeObjectIdenticalTo:[prekazkaState objectAtIndex:i]];
-                [prekazkaType removeObjectIdenticalTo:[prekazkaType objectAtIndex:i]];
+        for (int i=1; i < json.count; i++) {
+            if (json[i][@"obstacleTitle"] != NULL) {
+                //jsem v prekazkach
+                [prekazkaNazev addObject:json[i][@"obstacleTitle"]];
+                [prekazkaPhoto addObject:json[i][@"obstacklePhoto"]];
+                [prekazkaState addObject:json[i][@"obstacleState"]];
+                [prekazkaType addObject:json[i][@"obstacleTypeTXT"]];
             }
-        }
-        
-        
-        for (int i=0; i < newsTitle.count; i++) {
-            if (![[newsTitle objectAtIndex:i] isKindOfClass:[NSNull class]]) {
-            } else {
-                [newsTitle removeObjectIdenticalTo:[newsTitle objectAtIndex:i]];
-                [newsText removeObjectIdenticalTo:[newsText objectAtIndex:i]];
-                [newsId removeObjectIdenticalTo:[newsId objectAtIndex:i]];
+            
+            if (json[i][@"newsText"] != NULL) {
+                //jsem v news
+                [newsText addObject:json[i][@"newsText"]];
+                [newsTitle addObject:json[i][@"newsTitle"]];
+                [newsId addObject:json[i][@"id"]];
+                [newsModified addObject:json[i][@"newsModified"]];
             }
-        }
-        
-        for (int i=0; i < fotkyParkCelek.count; i++) {
-            if (![[fotkyParkCelek objectAtIndex:i] isKindOfClass:[NSNull class]]) {
-            } else {
-                [fotkyParkCelek removeObjectIdenticalTo:[fotkyParkCelek objectAtIndex:i]];
+            
+            if (json[i][@"simple_park_photo"] != NULL) {
+                [fotkyParkCelek addObject:json[i][@"simple_park_photo"]];
             }
-        }
-        
-        for (int i=0; i < newsFotkaId.count; i++) {
-            if (![[newsFotkaId objectAtIndex:i] isKindOfClass:[NSNull class]]) {
-            } else {
-                [newsFotkaId removeObjectIdenticalTo:[newsFotkaId objectAtIndex:i]];
-                [newsFotkaURL removeObjectIdenticalTo:[newsFotkaURL objectAtIndex:i]];
+            
+            if (json[i][@"newsImageURL"] != NULL) {
+                [newsFotkaURL addObject:json[i][@"newsImageURL"]];
+                [newsFotkaId addObject:json[i][@"newsID"]];
             }
         }
         
         dispatch_async(dispatch_get_main_queue(), ^{
             //code executed on the main queue
             
-            NSLog(@"%@", prekazkaState);
-            
-            if ([state[0] isEqualToString:@"1"]) {
+            if ([state isEqualToString:@"1"]) {
                 //v provozu
                 [_parkStateImage setImage:[UIImage imageNamed:@"park_v_provozu.png"]];
             } else {
                  [_parkStateImage setImage:[UIImage imageNamed:@"park_neprovoz.png"]];
             }
-            _nadpisPark.text = [NSString stringWithFormat:@"%@", nazev[0]];
+            _nadpisPark.text = [NSString stringWithFormat:@"%@", nazev];
             
             [self ukazAktualni];
             [indicator stopAnimating];
@@ -250,7 +216,7 @@
 -(void) locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     [self.locationManager stopUpdatingLocation];
     
-    NSString* url = [NSString stringWithFormat: @"http://maps.apple.com/maps?saddr=%f,%f&daddr=%@,%@", [locations[0] coordinate].latitude, [locations[0] coordinate].longitude, lat[0] , lng[0]];
+    NSString* url = [NSString stringWithFormat: @"http://maps.apple.com/maps?saddr=%f,%f&daddr=%@,%@", [locations[0] coordinate].latitude, [locations[0] coordinate].longitude, lat , lng];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
 }
 
@@ -322,10 +288,10 @@
     // Configure the cell...
     if (coUkazat == 0) {
         //aktualni
-        cell.label1.text = [newsText objectAtIndex:newsText.count-1-indexPath.row];
+        cell.label1.text = [NSString stringWithFormat:@"%@\n%@", [newsModified objectAtIndex:newsModified.count-1-indexPath.row], [newsText objectAtIndex:newsText.count-1-indexPath.row]];
     } else if (coUkazat == 1) {
         //popis
-        cell.label1.text = [NSString stringWithFormat:@"%@ %@ %@ %@", popis[0], popis2[0], popis3[0], popis4[0]];
+        cell.label1.text = [NSString stringWithFormat:@"%@ %@ %@ %@", popis, popis2, popis3, popis4];
     } else {
         //komentare
     }
@@ -341,16 +307,25 @@
     
     if (coUkazat == 0) {
         //aktualni
-        delkaPopisu = [newsText objectAtIndex:indexPath.row];
+        delkaPopisu = [NSString stringWithFormat:@"%@\n%@", [newsModified objectAtIndex:indexPath.row], [newsText objectAtIndex:indexPath.row]];
     } else if (coUkazat == 1) {
         //popis
-        delkaPopisu = [NSString stringWithFormat:@"%@ %@ %@ %@", popis[0], popis2[0], popis3[0], popis4[0]];
+        delkaPopisu = [NSString stringWithFormat:@"%@ %@ %@ %@", popis, popis2, popis3, popis4];
     } else {
         //komentare
         delkaPopisu = @"";
     }
     
-    return (delkaPopisu.length + 10 < 40) ? 40 : 3*delkaPopisu.length/4;
+    // Get the text so we can measure it
+    NSString *text = delkaPopisu;
+    // Get a CGSize for the width and, effectively, unlimited height
+    CGSize constraint = CGSizeMake(245 - (0 * 2), 20000.0f);
+    // Get the size of the text given the CGSize we just made as a constraint
+    CGSize size = [text sizeWithFont:[UIFont systemFontOfSize:15] constrainedToSize:constraint lineBreakMode:UILineBreakModeWordWrap];
+    // Get the height of our measurement, with a minimum of 44 (standard cell size)
+    CGFloat height = MAX(size.height, 44.0f);
+    // return the height, with a bit of extra padding in
+    return height + (0 * 2);
 }
 
 - (IBAction)tappedOblibene:(id)sender {

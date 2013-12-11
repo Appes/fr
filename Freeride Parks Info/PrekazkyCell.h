@@ -11,5 +11,6 @@
 @interface PrekazkyCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *labelPrekazka;
 @property (weak, nonatomic) IBOutlet UIImageView *pozadiPrekazka;
+@property (weak, nonatomic) IBOutlet UILabel *labelFotoPrekazka;
 
 @end
